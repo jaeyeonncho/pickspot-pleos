@@ -64,6 +64,7 @@ node server/competition-server.mjs --serve
 # 별도 터미널: SDK platform-tools를 PATH에 추가
 adb -s emulator-5554 reverse tcp:8788 tcp:8788
 adb -s emulator-5554 install --user 10 -r apk/Pickspot_connected_debug.apk
+adb -s emulator-5554 shell am force-stop --user 10 dev.pickspot.app
 adb -s emulator-5554 shell am start --user 10 -n dev.pickspot.app/.MainActivity --es demo_scenario competition
 ```
 
