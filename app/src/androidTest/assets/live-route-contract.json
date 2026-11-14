@@ -1,0 +1,176 @@
+{
+  "at": 1800000000000,
+  "session": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "isDemo": false,
+    "version": 4,
+    "expiresAt": 1800000900000,
+    "locationShare": {
+      "status": "ready",
+      "revision": 2,
+      "sequence": 1,
+      "validUntil": 1800000030000,
+      "routingProvider": "tmap"
+    }
+  },
+  "request": {
+    "expectedVersion": 4,
+    "driver": {
+      "point": {
+        "latitude": 37.484,
+        "longitude": 127.03
+      },
+      "observedAt": 1800000000000,
+      "accuracyMeters": 12,
+      "source": "vehicle",
+      "consent": true,
+      "routingProvider": "tmap"
+    },
+    "destination": {
+      "point": {
+        "latitude": 37.49,
+        "longitude": 127.04
+      },
+      "name": "검사 목적지"
+    },
+    "waypoints": [],
+    "routeObservedAt": 1800000000000,
+    "drivePreference": "recommended",
+    "candidateIds": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  "report": {
+    "source": "tmap",
+    "synthetic": false,
+    "referenceOnly": true,
+    "method": "provider_route_via_pickup_minus_provider_baseline",
+    "drivePreference": "recommended",
+    "vehicleRouteOptionMatched": false,
+    "originalWaypointCount": 0,
+    "pickupOrder": "before_original_waypoints",
+    "requestedAt": 1800000000000,
+    "completedAt": 1800000000000,
+    "providerCalls": 7,
+    "baselineDriveSeconds": 600,
+    "candidates": [
+      {
+        "id": "a",
+        "curbStatus": "unknown",
+        "walkMeters": 230,
+        "walkSeconds": 240,
+        "viaDriveSeconds": 720,
+        "detourSeconds": 120,
+        "rawDeltaSeconds": 120,
+        "warnings": [
+          "CURB_UNVERIFIED"
+        ]
+      },
+      {
+        "id": "b",
+        "curbStatus": "unknown",
+        "walkMeters": 90,
+        "walkSeconds": 120,
+        "viaDriveSeconds": 900,
+        "detourSeconds": 300,
+        "rawDeltaSeconds": 300,
+        "warnings": [
+          "CURB_UNVERIFIED"
+        ]
+      },
+      {
+        "id": "c",
+        "curbStatus": "unknown",
+        "walkMeters": 480,
+        "walkSeconds": 420,
+        "viaDriveSeconds": 645,
+        "detourSeconds": 45,
+        "rawDeltaSeconds": 45,
+        "warnings": [
+          "CURB_UNVERIFIED"
+        ]
+      }
+    ],
+    "excluded": [],
+    "inputRevision": 1,
+    "inputMode": "live",
+    "inputValidUntil": 1800000030000,
+    "destinationName": "검사 목적지",
+    "sessionVersion": 5,
+    "passengerRevision": 2,
+    "catalogRevision": 1,
+    "candidateProvenance": [
+      {
+        "id": "a",
+        "name": "a",
+        "address": "검사 주소",
+        "sources": [
+          {
+            "publisher": "검사",
+            "url": "https://example.test/catalog",
+            "checkedOn": "2026-01-01",
+            "asOf": null,
+            "fact": "검사 전용"
+          }
+        ],
+        "review": {
+          "status": "reviewed",
+          "generalVehiclePickup": "confirmed",
+          "meetingConnection": "connected",
+          "dataUse": "permitted",
+          "checkedOn": "2026-01-01",
+          "validUntil": "2030-01-01",
+          "conditions": "실제 장소가 아닌 검사 자료"
+        }
+      },
+      {
+        "id": "b",
+        "name": "b",
+        "address": "검사 주소",
+        "sources": [
+          {
+            "publisher": "검사",
+            "url": "https://example.test/catalog",
+            "checkedOn": "2026-01-01",
+            "asOf": null,
+            "fact": "검사 전용"
+          }
+        ],
+        "review": {
+          "status": "reviewed",
+          "generalVehiclePickup": "confirmed",
+          "meetingConnection": "connected",
+          "dataUse": "permitted",
+          "checkedOn": "2026-01-01",
+          "validUntil": "2030-01-01",
+          "conditions": "실제 장소가 아닌 검사 자료"
+        }
+      },
+      {
+        "id": "c",
+        "name": "c",
+        "address": "검사 주소",
+        "sources": [
+          {
+            "publisher": "검사",
+            "url": "https://example.test/catalog",
+            "checkedOn": "2026-01-01",
+            "asOf": null,
+            "fact": "검사 전용"
+          }
+        ],
+        "review": {
+          "status": "reviewed",
+          "generalVehiclePickup": "confirmed",
+          "meetingConnection": "connected",
+          "dataUse": "permitted",
+          "checkedOn": "2026-01-01",
+          "validUntil": "2030-01-01",
+          "conditions": "실제 장소가 아닌 검사 자료"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>픽스팟 · 공유 시뮬레이션</title><link rel="stylesheet" href="/style.css"><script type="module" src="/share-driver.mjs"></script></head><body><main>
+<header><a class="brand" href="/driver"><span class="brand-dot"></span>pickspot</a><span class="eyebrow">운전자 확인 화면</span></header>
+<div class="intro"><span class="pill">가상 위치 · 공유 흐름 시뮬레이션</span><h1>함께 연결하고,<br>멈춤까지 확인해요.</h1><p>실제 기기 위치나 차량 앱을 사용하지 않아요.<br>이 화면은 공유 연결을 확인하는 용도예요.</p></div>
+<p id="notice" role="status" hidden></p><section class="card"><h2 id="driver-title">새 만남을 만들어 주세요</h2><p id="driver-copy">코드를 동승자 화면에 입력하면 연결돼요.</p><div class="place" id="invite" hidden><div><small>동승자에게 전달할 연결 코드</small><strong id="invite-code"></strong><a id="invite-link" target="_blank" rel="noopener">링크로 바로 참여하기</a></div></div><button id="create">가상 만남 만들기</button><button id="end" class="secondary" hidden>만남 종료하기</button><p class="fine">참여자의 좌표는 표시하지 않아요. 가상 후보 비교는 위치 공유가 유효할 때만 보여요.</p></section>
+<section class="card" id="shared-recommendation" hidden><span class="step">가상 후보 비교</span><h2>같은 만남에서 후보를 확인해요</h2><p class="fine">고정 예제 위치와 시연용 이동시간이에요. 실제 승하차 조건은 미확인이며 차량 내비를 바꾸지 않아요.</p><div data-candidates></div></section>
+<footer><span class="brand-dot"></span><p><a href="/" target="_blank" rel="noopener">동승자 화면 열기</a><br>두 화면을 나란히 열어 연결·공유·종료를 확인하세요.</p></footer>
+</main></body></html>

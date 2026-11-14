@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f5ef"><title>픽스팟 · 함께 만날 곳</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body><main>
+<header><a class="brand" href="/" aria-label="픽스팟 홈"><span class="brand-dot"></span>pickspot</a><span class="eyebrow">동승자 화면</span></header>
+<div class="intro"><h1>우리, 여기서<br>만나요.</h1><p>차량과 같은 만남 정보를 확인하세요.<br>앱 설치 없이 이 화면에서 함께 준비해요.</p></div>
+<div id="notice" role="status" aria-live="polite" hidden></div>
+<section id="join-panel" class="card">
+  <span class="step">01 · 연결</span><h2>차량과 연결하기</h2><p>차량 화면에 표시된 12자리 연결 코드를 입력해 주세요.</p>
+  <form id="join-form"><label for="code">연결 코드</label><input id="code" name="code" maxlength="14" placeholder="예: A1B2 C3D4 E5F6" autocomplete="off" autocapitalize="characters" spellcheck="false" required><button id="join" type="submit">만남에 참여하기 <span aria-hidden="true">→</span></button></form>
+</section>
+<section id="consent-panel" class="card" hidden>
+  <span class="step">02 · 공유</span><h2>어디에서 만날까요?</h2><p>아래 지정 위치를 차량과 공유해요. 기기의 현재 위치는 사용하지 않아요.</p>
+  <div class="place"><span class="location-icon" aria-hidden="true">◎</span><div><strong>양재·매봉 주변</strong><small>지정 위치 · 기기 위치 사용 안 함</small></div></div>
+  <label class="check"><input type="checkbox" id="consent"><span>이 만남에 지정 위치를 공유할게요.</span></label>
+  <button id="share" disabled>이 위치 공유하기 <span aria-hidden="true">→</span></button>
+</section>
+<section id="meeting-panel" class="card" hidden>
+  <span class="step">03 · 만남</span><h2 id="meeting-title">차량에서 지점을 고르고 있어요</h2><p id="meeting-copy">선택이 끝나면 만날 곳이 여기에 표시돼요.</p>
+  <p id="route-summary" class="fine" hidden></p>
+  <div id="destination" hidden><div class="destination-label">함께 만날 곳</div><h3 id="destination-name"></h3><p id="destination-note"></p><div class="metrics"><div><small>동승자 도보</small><strong id="walk"></strong></div><div><small>차량 추가 우회</small><strong id="detour"></strong></div></div></div>
+  <ol class="timeline"><li class="done">위치 공유됨</li><li id="selection-step">만날 지점 선택 대기</li><li id="navigation-step">차량 내비 설정 대기</li></ol>
+  <p class="fine">도보·우회 정보는 참고값이에요. 차량의 도착 예정 시각은 아직 제공하지 않아요.</p>
+</section>
+<section id="ended-panel" class="card" hidden><span class="step">만남 종료</span><h2 id="ended-title">위치 공유를 마쳤어요</h2><p>위치와 만남 정보를 지웠어요. 차량 내비에 이미 전달한 목적지는 유지됩니다.</p><button id="new-join">다른 만남에 참여하기</button></section>
+<div id="session-actions" hidden><p id="expiry" class="fine"></p><button id="refresh" class="secondary">정보 다시 확인</button><button id="end" class="text-button">공유 종료하기</button></div>
+<footer><span class="brand-dot"></span><p>만날 곳을 함께 정하는 픽스팟</p></footer>
+</main></body></html>

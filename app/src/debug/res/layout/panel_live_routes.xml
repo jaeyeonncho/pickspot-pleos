@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/live_routes_panel" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/card_background" android:padding="@dimen/card_padding" android:layout_marginTop="@dimen/section_gap">
+    <TextView style="@style/Text.Heading" android:text="@string/live_routes_title" />
+    <TextView style="@style/Text.Caption" android:text="@string/live_routes_note" android:layout_marginTop="@dimen/content_gap" />
+    <TextView android:id="@+id/live_routes_status" style="@style/Text.Body" android:text="@string/live_routes_unavailable" android:accessibilityLiveRegion="polite" android:layout_marginTop="@dimen/content_gap" />
+    <LinearLayout android:id="@+id/live_routes_results" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" />
+    <Button android:id="@+id/live_routes_compare" style="@style/Widget.Pickspot.Button" android:text="@string/live_routes_request" android:enabled="false" android:alpha="0.45" android:layout_marginTop="@dimen/content_gap" />
+    <Button android:id="@+id/live_routes_cancel" style="@style/Widget.Pickspot.Button" android:text="@string/live_routes_cancel" android:visibility="gone" android:layout_marginTop="@dimen/content_gap" />
+</LinearLayout>

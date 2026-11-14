@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f5ef"><title>픽스팟 · 위치 수신 확인</title><link rel="stylesheet" href="/style.css"><script type="module" src="/location-check.mjs"></script></head>
+<body><main>
+<header><a class="brand" href="/" aria-label="픽스팟 홈"><span class="brand-dot"></span>pickspot</a><span class="eyebrow">위치 수신 확인</span></header>
+<div class="intro"><span class="pill">이 브라우저에서만 확인</span><h1>내 위치,<br>잘 잡히나요?</h1><p>만남을 시작하기 전 위치 수신을 확인해요.<br>차량이나 서버에는 위치를 보내지 않아요.</p></div>
+<section class="card" aria-labelledby="location-title">
+  <div role="status" aria-live="polite"><span class="step">위치 수신 상태</span><h2 id="location-title">위치 확인을 시작해 볼까요?</h2><p id="location-copy">동의한 뒤 시작하면 이 브라우저의 위치 수신 상태를 확인해요.</p></div>
+  <div id="location-details" class="place" hidden><span class="location-icon" aria-hidden="true">◎</span><div><strong id="location-accuracy"></strong><small id="location-time"></small></div></div>
+  <label class="check"><input type="checkbox" id="location-consent"><span>기기 위치를 이 브라우저에서만 확인하는 데 동의해요.</span></label>
+  <button id="location-start" disabled>위치 확인 시작하기 <span aria-hidden="true">→</span></button>
+  <button id="location-stop" class="secondary" hidden>확인 중지하고 위치 지우기</button>
+  <p class="fine">최대 2분 동안 확인해요. 화면을 떠나거나 동의를 해제하면 멈추고 위치를 지워요. 새로고침해도 자동으로 시작하지 않아요.</p>
+</section>
+<footer><span class="brand-dot"></span><p>좌표를 표시하거나 파일로 저장하지 않아요.<br><a href="/">예제 만남 화면으로 돌아가기</a></p></footer>
+</main></body></html>

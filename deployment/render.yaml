@@ -1,0 +1,22 @@
+# Review before deployment. Applies only to the dedicated Free sharing test.
+services:
+  - type: web
+    name: pickspot-sharing-test
+    runtime: node
+    plan: free
+    region: singapore
+    numInstances: 1
+    autoDeployTrigger: "off"
+    buildCommand: node --check server/render-server.mjs
+    startCommand: node server/render-server.mjs
+    envVars:
+      - key: NODE_VERSION
+        value: 24.18.0
+      - key: WEB_CONCURRENCY
+        value: "1"
+      - key: PICKSPOT_DEPLOYMENT
+        value: render-free
+      - key: PICKSPOT_DRIVER_KEY
+        sync: false
+# Default TCP health check: HTTP probes may not pass the edge TLS marker.
+# Do not add TMAP keys, a paid plan, disks, databases, or more instances here.

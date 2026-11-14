@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>픽스팟 브라우저 실행 검사</title><h1>위치 공유 실행 검사</h1><p>실제 위치와 권한을 사용하지 않는 로컬 검사입니다.</p><pre id="result">검사 중</pre><script type="module">
+import {BrowserLocation} from '/browser-location.mjs';
+import {ShareClient} from '/share-client.mjs';
+const results=[];
+let capture,client;
+try {
+ let at=Date.now(),tick=0,watchCalls=0;
+ const states=[];
+ capture=new BrowserLocation({secure:true,geolocation:{watchPosition(){watchCalls++;return 0;},clearWatch(){}},now:()=>at,monotonic:()=>tick,onChange:s=>states.push(s.status)});
+ capture.start({consent:true});
+ if(watchCalls!==1)throw Error('위치 수신 시작 안 됨');
+ at+=12001;tick+=12001;
+ await new Promise(resolve=>setTimeout(resolve,350));
+ if(states.at(-1)!=='timeout')throw Error('대기 시간 제한 동작 안 함');
+ results.push('위치 수신 시작·12초 제한 통과');
+ const id='aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa';let updates=0;
+ client=new ShareClient({credentials:{id,token:'test-only',expiresAt:Date.now()+60000},minIntervalMs:50,
+ api:{read:async()=>({isDemo:false,locationShare:{revision:0}}),grant:async()=>({status:'waiting',grantId:id}),
+ update:async input=>{updates++;return {status:'ready',grantId:id,sequence:input.sequence,validUntil:Date.now()+30000};},withdraw:async()=>({status:'withdrawn',grantId:null})}});
+ await client.start({consent:true});
+ const point=()=>({point:{latitude:37.4859,longitude:127.0348},observedAt:Date.now(),accuracyMeters:12,source:'browser',consent:true,validUntil:Date.now()+30000});
+ client.push(point());await new Promise(resolve=>setTimeout(resolve,1));client.push(point());await new Promise(resolve=>setTimeout(resolve,100));
+ if(updates!==2||client.state.status!=='sharing')throw Error('연속 위치 전송 대기열 오류');
+ await client.stop();results.push('연속 전송 예약·중지 통과');
+ document.getElementById('result').textContent=JSON.stringify({passed:true,results},null,2);
+}catch(error){document.getElementById('result').textContent=JSON.stringify({passed:false,results,error:String(error)},null,2);}
+finally{try{capture?.dispose();await client?.stop();}catch{}}
+</script></html>

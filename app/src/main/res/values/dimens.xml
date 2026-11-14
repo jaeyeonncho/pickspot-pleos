@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="section_gap">24dp</dimen>
+    <dimen name="content_gap">12dp</dimen>
+    <dimen name="card_padding">22dp</dimen>
+    <dimen name="corner_radius">16dp</dimen>
+    <dimen name="outline_width">2dp</dimen>
+    <dimen name="title_text">34sp</dimen>
+    <dimen name="heading_text">28sp</dimen>
+    <dimen name="body_text">23sp</dimen>
+    <dimen name="caption_text">18sp</dimen>
+    <dimen name="button_height">72dp</dimen>
+    <dimen name="sketch_height">220dp</dimen>
+    <bool name="wide_layout">false</bool>
+</resources>

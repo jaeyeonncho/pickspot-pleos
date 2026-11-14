@@ -1,0 +1,32 @@
+{
+  "status": "connected",
+  "session": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "status": "waiting",
+    "version": 3,
+    "expiresAt": 1800000900000,
+    "isDemo": false,
+    "passenger": null,
+    "candidates": [],
+    "selection": null,
+    "route": null,
+    "destination": null,
+    "destinationOptions": [],
+    "locationShare": {
+      "status": "not-sharing",
+      "revision": 0,
+      "sequence": 0,
+      "validUntil": null
+    }
+  },
+  "vehicleToken": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+  "capabilities": [
+    "read-session",
+    "compare-routes"
+  ],
+  "origin": "https://example.test",
+  "processingRegion": "검사 전용 · 실제 전송 없음",
+  "candidateIds": [
+    "reviewed-example"
+  ]
+}

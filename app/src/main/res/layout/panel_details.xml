@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:id="@+id/selected_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+        android:padding="@dimen/card_padding" android:background="@drawable/panel_background">
+        <TextView android:id="@+id/selected_heading" style="@style/Text.Caption" android:text="@string/selected_heading" android:textColor="@color/accent"/>
+        <TextView android:id="@+id/selected_name" style="@style/Text.Heading" android:layout_marginTop="@dimen/content_gap"/>
+        <dev.pickspot.app.ui.MeetingSketchView android:id="@+id/sketch" android:layout_width="match_parent" android:layout_height="@dimen/sketch_height"
+            android:layout_marginTop="@dimen/content_gap" android:contentDescription="@string/sketch_description"/>
+        <TextView android:id="@+id/selected_note" style="@style/Text.Body" android:layout_marginTop="@dimen/content_gap"/>
+        <TextView android:id="@+id/detail_metrics" style="@style/Text.Body" android:layout_marginTop="@dimen/content_gap"/>
+        <TextView android:id="@+id/detail_demo_note" style="@style/Text.Caption" android:text="@string/detail_demo_note" android:layout_marginTop="@dimen/content_gap"/>
+        <include layout="@layout/panel_trip_preview"/>
+    </LinearLayout>
+    <TextView android:id="@+id/navigation_status" style="@style/Text.Body" android:textColor="@color/muted"
+        android:layout_marginTop="@dimen/section_gap" android:layout_marginBottom="@dimen/content_gap" android:accessibilityLiveRegion="polite"/>
+    <TextView android:id="@+id/share_status" style="@style/Text.Caption" android:text="@string/share_failed" android:visibility="gone"/>
+    <Button android:id="@+id/retry_share" style="@style/Widget.Pickspot.Button.Action" android:text="@string/retry_share" android:visibility="gone"/>
+    <Button android:id="@+id/navigate" style="@style/Widget.Pickspot.Button.Action" android:text="@string/route_select_first"/>
+    <Button android:id="@+id/reconnect" style="@style/Widget.Pickspot.Button.Action" android:text="@string/reconnect" android:layout_marginTop="@dimen/content_gap"/>
+</LinearLayout>

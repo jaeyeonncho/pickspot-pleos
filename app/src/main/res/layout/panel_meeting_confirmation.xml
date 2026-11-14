@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/meeting_confirmation" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+    <TextView android:id="@+id/meeting_confirmation_status" style="@style/Text.Caption"
+        android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="16dp"
+        android:maxLines="2" android:ellipsize="end" android:accessibilityLiveRegion="polite"/>
+    <Button android:id="@+id/confirm_meeting_point" style="@style/Widget.Pickspot.Button.Action"
+        android:text="@string/confirm_meeting_point"/>
+</LinearLayout>

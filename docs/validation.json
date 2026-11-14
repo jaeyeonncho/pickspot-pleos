@@ -1,0 +1,30 @@
+{
+  "tests": 188,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "lint": {
+    "Error": 0,
+    "Warning": 26
+  },
+  "serverTests": 325,
+  "apkSha256": "82998933261745a5b0c8ed55a20e3a8ffbba4968c30875494a2d55894a811869",
+  "uiAtlas": {
+    "vehicleStates": 36,
+    "webStates": 8,
+    "syntheticStates": true
+  },
+  "submissionCopyValidation": {
+    "tests": 188,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "lint": {
+      "Warning": 23
+    },
+    "serverTests": 325,
+    "serverFailures": 0,
+    "debugBuild": true,
+    "releaseBuild": true
+  }
+}

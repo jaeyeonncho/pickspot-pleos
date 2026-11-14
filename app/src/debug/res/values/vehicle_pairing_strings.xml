@@ -1,0 +1,15 @@
+<resources>
+    <string name="pairing_title">만남에 차량 연결</string>
+    <string name="pairing_unavailable">차량 연결 서버를 준비하고 있어요. 아직 연결 코드를 만들 수 없어요.</string>
+    <string name="pairing_idle">코드를 만든 뒤 Mac 관리 화면에서 같은 코드를 입력하고 승인해 주세요.</string>
+    <string name="pairing_creating">연결 코드를 만들고 있어요.</string>
+    <string name="pairing_waiting">Mac 관리 화면에서 이 차량을 승인해 주세요.</string>
+    <string name="pairing_connected">차량이 연결됐어요. 경로 비교는 아래에서 별도로 확인한 뒤 시작해요.</string>
+    <string name="pairing_expired">연결 시간이 끝났어요. 새 코드로 다시 연결해 주세요.</string>
+    <string name="pairing_failed">연결을 확인하지 못했어요. Mac에서 기존 연결 상태를 확인한 뒤 새 코드를 만들어 주세요.</string>
+    <string name="pairing_note">연결만으로 위치를 보내지 않아요. 화면을 나가면 이 앱의 연결 정보를 지워요. 서버 권한 해제는 Mac 관리 화면에서 해 주세요.</string>
+    <string name="pairing_start">차량 연결 코드 만들기</string>
+    <string name="pairing_cancel">연결 요청 취소</string>
+    <string name="pairing_clear">이 앱의 연결 정보 지우기</string>
+    <string name="pairing_remaining">코드 만료까지 %1$d초</string>
+</resources>

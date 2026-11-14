@@ -1,0 +1,18 @@
+<resources>
+    <string name="vehicle_location_accuracy_check">차량 입력 확인 · 개발용</string>
+    <string name="vehicle_location_title">차량 위치</string>
+    <string name="vehicle_location_start">차량 위치 확인</string>
+    <string name="vehicle_location_stop">위치 확인 중지</string>
+    <string name="vehicle_location_off">‘차량 위치 확인’을 누르면 위치를 받을 수 있는지 확인해요.</string>
+    <string name="vehicle_location_unsupported">이 차량 환경에서는 위치 서비스를 사용할 수 없어요.</string>
+    <string name="vehicle_location_permission">위치 권한이 필요해요. 확인 버튼으로 다시 요청할 수 있어요. 권한 요청이 뜨지 않으면 차량 앱 설정에서 확인해 주세요.</string>
+    <string name="vehicle_location_waiting">차량에서 새 위치를 기다리고 있어요.</string>
+    <string name="vehicle_location_fresh">새 차량 위치를 받았어요 · 정확도 정보 없음</string>
+    <string name="vehicle_location_stale">30초 이상 지난 위치예요. 새 위치를 기다리고 있어요.</string>
+    <string name="vehicle_location_invalid">받은 위치 정보를 사용할 수 없어요. 새 위치를 기다려 주세요.</string>
+    <string name="vehicle_location_timeout">15초 동안 위치를 받지 못했어요. 차량 위치 설정을 확인하거나 다시 시도해 주세요.</string>
+    <string name="vehicle_location_error">차량 위치를 읽지 못했어요. 권한·차량 위치 설정을 확인한 뒤 다시 시도해 주세요.</string>
+    <string name="vehicle_location_paused">화면을 벗어나 위치 수신을 일시 중지했어요.</string>
+    <string name="vehicle_location_details">%1$s\n측정 %2$s · %3$d초 전</string>
+    <string name="vehicle_location_note">화면을 보는 동안만 위치를 받고 서버에는 보내지 않아요. 후보·이동시간 계산에는 아직 사용하지 않아요.</string>
+</resources>

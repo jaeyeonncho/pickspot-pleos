@@ -1,0 +1,45 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="@dimen/screen_padding">
+        <TextView style="@style/Text.Heading" android:text="@string/brand" android:textColor="@color/accent"/>
+        <TextView style="@style/Text.Title" android:text="@string/screen_title" android:layout_marginTop="@dimen/section_gap"/>
+        <TextView android:id="@+id/driving_status" style="@style/Text.Body" android:text="@string/driving_unknown"
+            android:layout_marginTop="@dimen/section_gap" android:accessibilityLiveRegion="polite"/>
+        <LinearLayout android:id="@+id/interactive_content" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:gravity="center_vertical" android:layout_marginTop="@dimen/content_gap">
+            <ProgressBar android:id="@+id/loading_progress" android:layout_width="32dp" android:layout_height="32dp"
+                android:layout_marginEnd="@dimen/content_gap" android:contentDescription="@string/session_loading"/>
+            <TextView android:id="@+id/session_status" style="@style/Text.Caption" android:layout_width="0dp" android:layout_weight="1" android:accessibilityLiveRegion="polite"/>
+            <Button android:id="@+id/reload_session" style="@style/Widget.Pickspot.Button.Action" android:layout_width="wrap_content" android:text="@string/retry_session"/>
+        </LinearLayout>
+        <TextView android:id="@+id/invitation" style="@style/Text.Heading" android:padding="@dimen/card_padding"
+            android:background="@drawable/panel_background" android:layout_marginTop="@dimen/content_gap" android:textIsSelectable="true" android:visibility="gone"/>
+        <Button android:id="@+id/change_destination" style="@style/Widget.Pickspot.Button.Action" android:text="@string/change_destination" android:visibility="gone" android:layout_marginTop="@dimen/content_gap"/>
+        <TextView android:id="@+id/route_summary" style="@style/Text.Caption" android:layout_marginTop="@dimen/content_gap"
+            android:padding="@dimen/content_gap" android:background="@drawable/panel_background" android:visibility="gone" android:accessibilityLiveRegion="polite"/>
+        <LinearLayout android:id="@+id/session_management" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="@dimen/content_gap" android:visibility="gone">
+            <Button android:id="@+id/recalculate_routes" style="@style/Widget.Pickspot.Button.Action" android:layout_width="wrap_content" android:text="@string/recalculate_routes"/>
+            <Button android:id="@+id/end_session" style="@style/Widget.Pickspot.Button.Action" android:layout_width="wrap_content" android:layout_marginStart="@dimen/content_gap" android:text="@string/end_session"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:padding="@dimen/content_gap" android:background="@drawable/panel_background" android:layout_marginTop="@dimen/content_gap">
+            <TextView android:id="@+id/vehicle_route_summary" style="@style/Text.Body" android:text="@string/vehicle_route_missing"/>
+            <TextView android:id="@+id/vehicle_input_status" style="@style/Text.Caption" android:text="@string/vehicle_input_waiting"/>
+            <Button android:id="@+id/refresh_vehicle_route" style="@style/Widget.Pickspot.Button.Action" android:text="@string/refresh_vehicle_route"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/body" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_gap" android:orientation="vertical" android:baselineAligned="false">
+            <include android:id="@+id/candidates_panel" layout="@layout/panel_candidates"/>
+            <include android:id="@+id/details_panel" layout="@layout/panel_details"/>
+        </LinearLayout>
+        <include layout="@layout/panel_meeting_confirmation"/>
+        <TextView style="@style/Text.Caption" android:text="@string/safety_note" android:layout_marginTop="@dimen/section_gap"/>
+        <include layout="@layout/panel_vehicle_location"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

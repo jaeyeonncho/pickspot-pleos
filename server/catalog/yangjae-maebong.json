@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "region": "양재·매봉",
+  "entries": [
+    {
+      "id": "yangjae-parking",
+      "name": "양재공영주차장",
+      "address": "서초구 양재천로 125-10",
+      "vehiclePoint": null,
+      "walkingPoint": null,
+      "sources": [
+        {
+          "publisher": "서울시",
+          "url": "https://umppa.seoul.go.kr/icare/user/kidsCafe/BD_selectKidsCafeDirections.do?q_fcltyId=SC231201",
+          "checkedOn": "2026-11-15",
+          "asOf": null,
+          "fact": "서울시 시설 접근 안내에서 주소, 유료 주차장, 5분 150원 및 혼잡 안내 확인. 키즈카페 운영일은 주차장 운영일로 사용하지 않음"
+        },
+        {
+          "publisher": "서초구 주차관리과",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?bcIdx=409896&cbIdx=57",
+          "checkedOn": "2026-11-15",
+          "asOf": "2026-06-30",
+          "fact": "2026년 7월 1일 00시부터 관내 공영주차장 차량 5부제 해제 공지. 4월 시행 안내보다 후속 공지"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "generalVehiclePickup": "unknown",
+        "meetingConnection": "unknown",
+        "dataUse": "unverified",
+        "checkedOn": null,
+        "validUntil": null,
+        "conditions": null
+      },
+      "openQuestions": [
+        "차량 출입구와 보행 출입구의 정확한 위치 및 접근 방향",
+        "유료 입차 후 동승자를 태울 수 있는 공간과 보행 연결",
+        "주차장 자체 운영 시간, 요금·회차 조건 및 현재 현장 제한",
+        "채택할 자료·좌표의 이용 조건과 재확인 기한"
+      ]
+    },
+    {
+      "id": "eonju-parking",
+      "name": "언주초교 공영주차장",
+      "address": "강남구 남부순환로363길 19",
+      "vehiclePoint": null,
+      "walkingPoint": null,
+      "sources": [
+        {
+          "publisher": "강남구도시관리공단",
+          "url": "https://park.gncity.or.kr/user/html/parkingLocation.html",
+          "checkedOn": "2026-11-15",
+          "asOf": null,
+          "fact": "시설 안내에 주소, 203면, 평일·토일공휴일 24시간, 5분 200원 명시"
+        },
+        {
+          "publisher": "강남구도시관리공단",
+          "url": "https://www.gncity.or.kr/gncity/bbs/BMSR00050/view.do?boardId=9712&menuNo=200206",
+          "checkedOn": "2026-11-15",
+          "asOf": "2026-07-01",
+          "fact": "2026년 7월 1일 00시부터 공영주차장 승용차 5부제 해제 공지. 4월 시행 안내보다 후속 공지"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "generalVehiclePickup": "unknown",
+        "meetingConnection": "unknown",
+        "dataUse": "unverified",
+        "checkedOn": null,
+        "validUntil": null,
+        "conditions": null
+      },
+      "openQuestions": [
+        "학교 출입구와 구분되는 차량 진입구·보행 출입구 및 접근 방향",
+        "유료 입차 후 일반 차량 동승자 만남 가능 여부와 정확한 공간",
+        "현장 출입 제한, 만차 시 처리, 회차·대기 요금 조건",
+        "채택할 자료·좌표의 이용 조건과 재확인 기한"
+      ]
+    },
+    {
+      "id": "nonhyeon32-parking",
+      "name": "논현로32길15 공영주차장",
+      "address": "강남구 논현로32길 15",
+      "vehiclePoint": null,
+      "walkingPoint": null,
+      "sources": [
+        {
+          "publisher": "강남구도시관리공단",
+          "url": "https://park.gncity.or.kr/user/html/parkingLocation.html",
+          "checkedOn": "2026-11-15",
+          "asOf": null,
+          "fact": "시설 안내에 주소, 16면, 평일·토일공휴일 24시간, 5분 300원 명시"
+        },
+        {
+          "publisher": "강남구도시관리공단",
+          "url": "https://www.gncity.or.kr/gncity/bbs/BMSR00050/view.do?boardId=9712&menuNo=200206",
+          "checkedOn": "2026-11-15",
+          "asOf": "2026-07-01",
+          "fact": "2026년 7월 1일 00시부터 공영주차장 승용차 5부제 해제 공지. 4월 시행 안내보다 후속 공지"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "generalVehiclePickup": "unknown",
+        "meetingConnection": "unknown",
+        "dataUse": "unverified",
+        "checkedOn": null,
+        "validUntil": null,
+        "conditions": null
+      },
+      "openQuestions": [
+        "차량 진입 방향·보행 출입구 및 같은 만남 공간 연결",
+        "16면 시설에서 일반 차량 동승자 만남·대기 가능 여부",
+        "만차 시 처리와 현재 운영·회차·대기 요금 조건",
+        "채택할 자료·좌표의 이용 조건과 재확인 기한"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<resources>
+    <string name="live_routes_title">이동 경로 비교</string>
+    <string name="live_routes_note">TMAP으로 도보·차량 우회 시간을 비교해요. 위치 전송은 비교 전에 확인해요.</string>
+    <string name="live_routes_unavailable">실제 경로 비교가 아직 연결되지 않았어요. 지금은 차량 입력만 확인할 수 있어요.</string>
+    <string name="live_routes_waiting">최신 차량 입력과 동승자 동의·위치, 비교할 후보가 필요해요.</string>
+    <string name="live_routes_available">비교할 준비가 됐어요. 먼저 위치 전송 내용을 확인해 주세요.</string>
+    <string name="live_routes_consent">위치 전송 확인을 기다리고 있어요.</string>
+    <string name="live_routes_calculating">동승자 도보와 차량 우회 시간을 비교하고 있어요.</string>
+    <string name="live_routes_ready">비교 결과예요. 실제 정차 가능 여부는 현장 표지도 확인해 주세요.</string>
+    <string name="live_routes_empty">이번에는 비교할 수 있는 후보가 없어요.</string>
+    <string name="live_routes_stale">입력이 바뀌었거나 시간이 지나 결과를 지웠어요. 최신 입력으로 다시 확인해 주세요.</string>
+    <string name="live_routes_connection">연결을 확인하지 못했어요. 이전 결과는 숨겼어요.</string>
+    <string name="live_routes_access">만남에 다시 연결해야 해요.</string>
+    <string name="live_routes_changed">만남 정보가 바뀌었어요. 최신 상태를 확인해 주세요.</string>
+    <string name="live_routes_consent_required">운전자와 동승자의 경로 전송 동의가 필요해요.</string>
+    <string name="live_routes_input">차량 위치·내비 경로·계산 기준을 다시 확인해 주세요.</string>
+    <string name="live_routes_limit">조회 간격이나 이용 한도에 도달했어요. 잠시 후 상태를 확인해 주세요.</string>
+    <string name="live_routes_invalid">결과를 확인할 수 없어 표시하지 않았어요.</string>
+    <string name="live_routes_request">위치 전송 내용 확인</string>
+    <string name="live_routes_again">다시 비교하기</string>
+    <string name="live_routes_cancel">계산 중지</string>
+    <string name="live_routes_metrics">도보 %1$dm · %2$s\n차량 우회 %3$s</string>
+    <string name="live_routes_conditions">이용 조건: %1$s</string>
+    <string name="live_routes_sources">자료 출처\n%1$s</string>
+    <string name="live_routes_reference">TMAP 비교값 · 현재 Pleos 안내와 계산 기준이 다를 수 있어요. 내비 안내는 바꾸지 않았어요.</string>
+    <string name="live_consent_title">경로 비교를 위해 위치를 보낼까요?</string>
+    <string name="live_consent_recipient">픽스팟 서버: %1$s\n처리 지역: %2$s</string>
+    <string name="live_consent_data">픽스팟 서버에 차량 위치·정확도, 최종 목적지·경유지, 측정·경로 확인 시각, 비교 기준과 비교할 지점 정보를 보내요.</string>
+    <string name="live_consent_tmap">TMAP에는 차량·동승자·목적지·경유지·후보 지점의 좌표와 계산 기준을 보내 도보·우회 시간을 비교해요.</string>
+    <string name="live_consent_note">동승자는 별도로 동의해야 해요. 이번 비교 한 번에만 동의하며, 현재 내비 안내는 그대로 유지해요. 계산 중지는 이미 전달된 정보를 되돌리지는 않아요.</string>
+    <string name="live_consent_confirm">동의하고 한 번 비교</string>
+    <string name="live_consent_cancel">보내지 않고 돌아가기</string>
+</resources>

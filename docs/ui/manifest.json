@@ -1,0 +1,266 @@
+[
+  {
+    "path": "01_만남연결/웹_01_join.jpg",
+    "title": "웹 참여 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "01_만남연결/차량_01_waiting-dark.png",
+    "title": "참여 코드 대기 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "01_만남연결/차량_01_waiting-light.png",
+    "title": "참여 코드 대기 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "02_위치공유/웹_02_consent.jpg",
+    "title": "공유 동의 전 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "02_위치공유/웹_03_consent_ready.jpg",
+    "title": "공유 동의 후 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "02_위치공유/차량_02_calculating-dark.png",
+    "title": "후보 계산 중 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "02_위치공유/차량_02_calculating-light.png",
+    "title": "후보 계산 중 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "03_후보비교/웹_04_waiting.jpg",
+    "title": "웹 확정 대기 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "03_후보비교/차량_03_balanced-dark.png",
+    "title": "균형 있게 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "03_후보비교/차량_03_balanced-light.png",
+    "title": "균형 있게 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "03_후보비교/차량_04_less_walk-dark.png",
+    "title": "도보 짧게 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "03_후보비교/차량_04_less_walk-light.png",
+    "title": "도보 짧게 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "03_후보비교/차량_05_less_detour-dark.png",
+    "title": "우회 적게 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "03_후보비교/차량_05_less_detour-light.png",
+    "title": "우회 적게 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "04_지점확정/웹_05_confirmed_b.jpg",
+    "title": "웹 B 확정 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "04_지점확정/차량_06_preview_b-dark.png",
+    "title": "B 미리보기 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "04_지점확정/차량_06_preview_b-light.png",
+    "title": "B 미리보기 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "04_지점확정/차량_07_confirming_b-dark.png",
+    "title": "B 확정 요청 중 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "04_지점확정/차량_07_confirming_b-light.png",
+    "title": "B 확정 요청 중 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "04_지점확정/차량_08_confirmed_b-dark.png",
+    "title": "B 확정 완료 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "04_지점확정/차량_08_confirmed_b-light.png",
+    "title": "B 확정 완료 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "05_지점변경/웹_06_confirmed_c.jpg",
+    "title": "웹 C 확정 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "05_지점변경/차량_09_preview_c_keep_b-dark.png",
+    "title": "B 유지·C 미리보기 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "05_지점변경/차량_09_preview_c_keep_b-light.png",
+    "title": "B 유지·C 미리보기 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "05_지점변경/차량_10_confirmed_c-dark.png",
+    "title": "C 변경 완료 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "05_지점변경/차량_10_confirmed_c-light.png",
+    "title": "C 변경 완료 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "06_Pleos이동정보/차량_11_pleos_loading-dark.png",
+    "title": "Pleos 조회 중 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "06_Pleos이동정보/차량_11_pleos_loading-light.png",
+    "title": "Pleos 조회 중 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "06_Pleos이동정보/차량_12_pleos_ready-dark.png",
+    "title": "Pleos 결과 표시 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "06_Pleos이동정보/차량_12_pleos_ready-light.png",
+    "title": "Pleos 결과 표시 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "07_만남설정/차량_13_settings-dark.png",
+    "title": "만남 설정 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "07_만남설정/차량_13_settings-light.png",
+    "title": "만남 설정 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "08_종료재시작/웹_07_ended.jpg",
+    "title": "웹 공유 종료 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "08_종료재시작/차량_15_ended-dark.png",
+    "title": "종료 후 재시작 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "08_종료재시작/차량_15_ended-light.png",
+    "title": "종료 후 재시작 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "09_오류복구/웹_08_reconnecting.jpg",
+    "title": "웹 재연결 · 동승자 웹",
+    "source": "synthetic-state-render",
+    "theme": "web"
+  },
+  {
+    "path": "09_오류복구/차량_16_expired-dark.png",
+    "title": "만남 만료 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "09_오류복구/차량_16_expired-light.png",
+    "title": "만남 만료 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "09_오류복구/차량_17_route_retry-dark.png",
+    "title": "경로 재계산 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "09_오류복구/차량_17_route_retry-light.png",
+    "title": "경로 재계산 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "09_오류복구/차량_18_error-dark.png",
+    "title": "연결 실패 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "09_오류복구/차량_18_error-light.png",
+    "title": "연결 실패 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  },
+  {
+    "path": "10_주행제한/차량_19_restricted-dark.png",
+    "title": "조작 제한 · 차량 어둡게",
+    "source": "synthetic-state-render",
+    "theme": "dark"
+  },
+  {
+    "path": "10_주행제한/차량_19_restricted-light.png",
+    "title": "조작 제한 · 차량 밝게",
+    "source": "synthetic-state-render",
+    "theme": "light"
+  }
+]

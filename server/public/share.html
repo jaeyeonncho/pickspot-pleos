@@ -1,0 +1,22 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>픽스팟 · 위치 공유</title><link rel="stylesheet" href="/style.css"><script type="module" src="/share-page.mjs"></script></head><body><main>
+<header><a class="brand" href="/"><span class="brand-dot"></span>pickspot</a><span class="eyebrow">동승자 위치 공유</span></header>
+<div class="intro"><span class="pill" id="mode-label">연결 확인 중</span><h1>만날 준비,<br>함께 시작해요.</h1><p id="mode-copy">위치 공유 서버를 확인하고 있어요.</p></div>
+<p id="notice" role="status" hidden></p>
+<section class="card" id="join-panel"><span class="step">01 · 만남 참여</span><h2 id="join-title">연결 코드를 입력해 주세요</h2><p id="join-help" hidden>참가 버튼을 누르기 전에는 링크가 사용되지 않아요. 카카오톡에서 열었다면 먼저 메뉴에서 ‘다른 브라우저로 열기’를 선택한 뒤 참가해 주세요. 위치 공유는 참가 후 따로 동의해요.</p><form id="join-form"><div id="code-fields"><label for="code">12자리 연결 코드</label><input id="code" maxlength="14" autocomplete="off" spellcheck="false" placeholder="예: A1B2 C3D4 E5F6"></div><button id="join" disabled>만남에 참여하기 <span aria-hidden="true">→</span></button></form><button id="use-code" class="secondary" type="button" hidden>다른 코드로 참여하기</button></section>
+<section class="card" id="sharing-panel" hidden><span class="step">02 · 위치 공유</span><div class="share-status-row"><h2 id="share-title" role="status" aria-live="polite"></h2><span id="share-freshness" class="share-freshness" aria-live="off"></span></div><p id="share-copy"></p>
+<p class="fine" id="scope-copy"></p><label class="check"><input id="share-consent" type="checkbox"><span id="consent-copy"></span></label>
+<div id="routing-consent-panel" hidden>
+<h2 id="routing-title">경로 계산은 따로 선택해요</h2><p class="fine" id="routing-recipient"></p>
+<p class="fine">픽스팟 서버가 현재 위치 좌표와 만남 후보의 보행 입구 좌표를 TMAP에 보내 도보 경로·시간을 계산해요. 선택한 뒤 공유를 시작하면 이 만남에서 공유 중인 동안 차량의 비교 요청에 사용할 수 있어요.</p>
+<p class="fine">철회하면 위치 공유도 함께 멈추고 픽스팟 서버의 현재 위치를 지우고 진행 중인 계산을 취소해요. 이미 TMAP에 전달된 요청은 회수할 수 없어요.</p>
+<label class="check"><input id="routing-consent" type="checkbox" disabled><span>선택 · 내 위치를 TMAP 경로 계산에 사용하는 데 동의해요.</span></label>
+<p class="fine" id="routing-status" role="status"></p>
+<button id="routing-stop" class="secondary" type="button" hidden>경로 동의 철회 · 위치 공유 중지</button>
+</div>
+<button id="share-start" disabled>동의하고 공유 시작하기 <span aria-hidden="true">→</span></button><button id="share-stop" class="secondary" hidden>위치 공유 중지하기</button>
+<p class="fine" id="sharing-limits">화면을 떠나거나 연결이 끊기면 수집을 멈춰요. 서버 삭제를 확인하기 전에는 다시 공유하지 않아요. 실제 픽업 경로 안내는 아직 제공하지 않아요.</p>
+</section>
+<section class="card" id="closed-panel" hidden><h2>만남이 끝났어요</h2><p>위치 수집을 멈췄어요. 다른 만남에 참여하려면 새 코드를 입력해 주세요.</p><button id="another">다른 만남에 참여하기</button></section>
+<section class="card" id="shared-recommendation" hidden><span class="step">가상 후보 비교</span><h2>같은 만남에서 후보를 확인해요</h2><p class="fine">고정 예제 위치와 시연용 이동시간이에요. 실제 승하차 조건은 미확인이며 차량 내비를 바꾸지 않아요.</p><div data-candidates></div></section>
+<footer><span class="brand-dot"></span><p id="footer-copy">위치와 공유 권한은 이 만남에서만 사용해요.</p></footer>
+</main></body></html>

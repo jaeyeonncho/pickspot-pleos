@@ -1,0 +1,22 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/card_padding">
+        <TextView style="@style/Text.Heading" android:text="@string/probe_title" />
+        <TextView android:id="@+id/probe_driving" style="@style/Text.Body" android:text="@string/driving_unknown" android:layout_marginTop="@dimen/section_gap" />
+        <LinearLayout android:id="@+id/probe_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <TextView style="@style/Text.Body" android:text="@string/probe_note" android:layout_marginTop="@dimen/section_gap" />
+        <include layout="@layout/panel_vehicle_pairing" />
+        <TextView android:id="@+id/probe_status" style="@style/Text.Body" android:text="@string/probe_idle" android:accessibilityLiveRegion="polite" android:layout_marginTop="@dimen/section_gap" />
+        <TextView android:id="@+id/probe_details" style="@style/Text.Heading" android:layout_marginTop="@dimen/content_gap" />
+        <TextView android:id="@+id/probe_route" style="@style/Text.Body" android:layout_marginTop="@dimen/section_gap" />
+        <Button android:id="@+id/probe_route_refresh" style="@style/Widget.Pickspot.Button" android:text="@string/probe_route_refresh" android:layout_marginTop="@dimen/content_gap" />
+        <TextView android:id="@+id/probe_preference_label" style="@style/Text.Heading" android:text="@string/probe_preference_title" android:labelFor="@id/probe_preference" android:layout_marginTop="@dimen/section_gap" />
+        <Spinner android:id="@+id/probe_preference" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="64dp" android:spinnerMode="dialog" android:prompt="@string/probe_preference_title" />
+        <TextView style="@style/Text.Caption" android:text="@string/probe_preference_note" />
+        <TextView android:id="@+id/probe_preparation" style="@style/Text.Heading" android:accessibilityLiveRegion="polite" android:layout_marginTop="@dimen/section_gap" />
+        <Button android:id="@+id/probe_start" style="@style/Widget.Pickspot.Button" android:text="@string/probe_start" android:layout_marginTop="@dimen/section_gap" />
+        <Button android:id="@+id/probe_stop" style="@style/Widget.Pickspot.Button" android:text="@string/probe_stop" android:enabled="false" android:layout_marginTop="@dimen/content_gap" />
+        <include layout="@layout/panel_live_routes" />
+        </LinearLayout>
+        <Button android:id="@+id/probe_back" style="@style/Widget.Pickspot.Button" android:text="@string/probe_back" android:layout_marginTop="@dimen/content_gap" />
+    </LinearLayout>
+</ScrollView>

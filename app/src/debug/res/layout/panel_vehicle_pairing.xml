@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/pairing_panel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="@dimen/section_gap">
+    <TextView style="@style/Text.Heading" android:text="@string/pairing_title" />
+    <TextView android:id="@+id/pairing_status" style="@style/Text.Body" android:text="@string/pairing_unavailable" android:accessibilityLiveRegion="polite" android:layout_marginTop="@dimen/content_gap" />
+    <TextView android:id="@+id/pairing_code" style="@style/Text.Heading" android:gravity="center" android:layout_marginTop="@dimen/content_gap" android:visibility="gone" />
+    <TextView android:id="@+id/pairing_remaining" style="@style/Text.Caption" android:gravity="center" android:visibility="gone" />
+    <TextView style="@style/Text.Caption" android:text="@string/pairing_note" android:layout_marginTop="@dimen/content_gap" />
+    <Button android:id="@+id/pairing_start" style="@style/Widget.Pickspot.Button" android:text="@string/pairing_start" android:enabled="false" android:alpha="0.45" android:layout_marginTop="@dimen/content_gap" />
+    <Button android:id="@+id/pairing_clear" style="@style/Widget.Pickspot.Button" android:text="@string/pairing_cancel" android:visibility="gone" android:layout_marginTop="@dimen/content_gap" />
+</LinearLayout>

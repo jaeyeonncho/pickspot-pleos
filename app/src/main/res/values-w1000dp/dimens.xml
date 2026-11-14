@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="screen_padding">40dp</dimen>
+    <dimen name="title_text">42sp</dimen>
+    <dimen name="sketch_height">250dp</dimen>
+    <bool name="wide_layout">true</bool>
+</resources>

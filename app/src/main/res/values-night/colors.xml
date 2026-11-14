@@ -1,0 +1,16 @@
+<!-- Pleos official grayscale values; application-specific role mapping. -->
+<resources>
+    <color name="background">#131417</color>
+    <color name="surface">#1D1E21</color>
+    <color name="outline">#686A72</color>
+    <color name="accent">#E0E1E6</color>
+    <color name="on_surface">#FFFFFF</color>
+    <color name="muted">#C7C9CE</color>
+    <color name="selected_surface">#313236</color>
+    <color name="sketch_surface">#131417</color>
+    <color name="sketch_grid">#313236</color>
+    <color name="sketch_marker">#A4A8AE</color>
+    <color name="button_selected">#E0E1E6</color>
+    <color name="on_button_selected">#131417</color>
+    <color name="pressed_surface">#44464E</color>
+</resources>

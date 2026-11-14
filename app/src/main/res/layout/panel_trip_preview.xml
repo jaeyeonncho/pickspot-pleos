@@ -1,0 +1,12 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+    android:layout_marginTop="@dimen/section_gap">
+    <TextView style="@style/Text.Heading" android:text="@string/trip_preview_title"/>
+    <TextView style="@style/Text.Caption" android:text="@string/trip_preview_source"/>
+    <TextView android:id="@+id/trip_preview_status" style="@style/Text.Body" android:minLines="2"
+        android:layout_marginTop="@dimen/content_gap" android:text="@string/trip_preview_idle"/>
+    <TextView android:id="@+id/trip_preview_age" style="@style/Text.Caption" android:minLines="1"/>
+    <Button android:id="@+id/trip_preview_request" style="@style/Widget.Pickspot.Button.Action"
+        android:text="@string/trip_preview_request" android:enabled="false"/>
+    <TextView style="@style/Text.Caption" android:text="@string/trip_preview_note"/>
+</LinearLayout>

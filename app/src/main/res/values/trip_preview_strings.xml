@@ -1,0 +1,19 @@
+<resources>
+    <string name="trip_preview_title">차량에서 선택 지점까지</string>
+    <string name="trip_preview_source">Pleos · 내비 차량 위치 기준</string>
+    <string name="trip_preview_idle">예상 시간과 거리를 확인할 수 있어요.</string>
+    <string name="trip_preview_loading">차량 내비에서 이동 정보를 확인하고 있어요…</string>
+    <string name="trip_preview_ready">예상 %1$s · %2$s</string>
+    <string name="trip_preview_meters">%1$dm</string>
+    <string name="trip_preview_kilometers">%1$.1fkm</string>
+    <string name="trip_preview_age">%1$d초 전 조회 · 30초간 표시</string>
+    <string name="trip_preview_stale">조회한 지 시간이 지났어요. 다시 확인해 주세요.</string>
+    <string name="trip_preview_request">시간·거리 확인</string>
+    <string name="trip_preview_request_again">시간·거리 다시 확인</string>
+    <string name="trip_preview_wait">이동 정보 확인 중…</string>
+    <string name="trip_preview_note">차량에서 선택한 지점까지의 시간·거리예요.\n우회·도보시간과는 별개예요.\n현재 내비 안내는 그대로 유지해요.</string>
+    <string name="trip_preview_failed">이동 정보를 확인하지 못했어요.</string>
+    <string name="trip_preview_restart">응답을 확인할 수 없어 조회를 멈췄어요. 다시 이용하려면 픽스팟 앱을 완전히 닫고 열어 주세요.</string>
+    <string name="trip_preview_blocked">지금은 이동 정보를 조회할 수 없어요.</string>
+    <string name="trip_preview_current">이동 정보 확인됨</string>
+</resources>

@@ -1,0 +1,23 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/card_padding">
+        <TextView style="@style/Text.Heading" android:text="@string/sharing_title" />
+        <TextView android:id="@+id/sharing_driving_status" style="@style/Text.Body" android:text="@string/driving_unknown" android:layout_marginTop="@dimen/section_gap" />
+        <LinearLayout android:id="@+id/sharing_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <TextView style="@style/Text.Body" android:text="@string/sharing_note" android:layout_marginTop="@dimen/section_gap" />
+        <TextView android:id="@+id/sharing_status" style="@style/Text.Heading" android:accessibilityLiveRegion="polite" android:layout_marginTop="@dimen/section_gap" />
+        <TextView android:id="@+id/sharing_freshness" style="@style/Text.Caption" android:minLines="1" android:accessibilityLiveRegion="none" android:layout_marginTop="@dimen/content_gap" />
+        <TextView android:id="@+id/sharing_code" style="@style/Text.Title" android:layout_marginTop="@dimen/section_gap" />
+        <LinearLayout android:id="@+id/sharing_recommendation" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="@dimen/card_padding" android:background="@drawable/panel_background"
+            android:layout_marginTop="@dimen/section_gap" android:visibility="gone">
+            <TextView style="@style/Text.Heading" android:text="@string/sharing_recommendation_title" />
+            <TextView style="@style/Text.Caption" android:text="@string/sharing_recommendation_note" android:layout_marginTop="@dimen/content_gap" />
+            <LinearLayout android:id="@+id/sharing_candidates" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        </LinearLayout>
+        <Button android:id="@+id/sharing_create" style="@style/Widget.Pickspot.Button" android:text="@string/sharing_create" android:layout_marginTop="@dimen/section_gap" />
+        <Button android:id="@+id/sharing_retry" style="@style/Widget.Pickspot.Button" android:text="@string/sharing_retry" android:layout_marginTop="@dimen/content_gap" />
+        <Button android:id="@+id/sharing_end" style="@style/Widget.Pickspot.Button" android:text="@string/sharing_end" android:layout_marginTop="@dimen/content_gap" />
+        </LinearLayout>
+        <Button android:id="@+id/sharing_back" style="@style/Widget.Pickspot.Button" android:text="@string/sharing_back" android:layout_marginTop="@dimen/content_gap" />
+    </LinearLayout>
+</ScrollView>

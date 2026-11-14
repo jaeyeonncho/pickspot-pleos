@@ -1,0 +1,11 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/card_padding">
+        <TextView style="@style/Text.Heading" android:text="@string/live_consent_title" />
+        <TextView android:id="@+id/live_consent_recipient" style="@style/Text.Body" android:layout_marginTop="@dimen/content_gap" />
+        <TextView style="@style/Text.Body" android:text="@string/live_consent_data" android:layout_marginTop="@dimen/section_gap" />
+        <TextView style="@style/Text.Body" android:text="@string/live_consent_tmap" android:layout_marginTop="@dimen/section_gap" />
+        <TextView style="@style/Text.Caption" android:text="@string/live_consent_note" android:layout_marginTop="@dimen/section_gap" />
+        <Button android:id="@+id/live_consent_confirm" style="@style/Widget.Pickspot.Button" android:text="@string/live_consent_confirm" android:layout_marginTop="@dimen/section_gap" />
+        <Button android:id="@+id/live_consent_cancel" style="@style/Widget.Pickspot.Button" android:text="@string/live_consent_cancel" android:layout_marginTop="@dimen/content_gap" />
+    </LinearLayout>
+</ScrollView>
