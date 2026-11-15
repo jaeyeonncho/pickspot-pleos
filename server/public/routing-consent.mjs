@@ -14,7 +14,7 @@ export function routingConsentView(disclosure,state) {
   return {visible:!!disclosure,canChoose:!!disclosure&&['idle','stopped'].includes(state?.status),canWithdraw:allowed,
     title:allowed?'경로 계산에도 동의했어요':'경로 계산은 따로 선택해요',
     recipient:disclosure?`픽스팟 서버: ${disclosure.origin} · 처리 지역: ${disclosure.processingRegion}`:'',
-    status:allowed?'이 만남에서 차량이 비교를 요청하면 현재 위치를 TMAP 경로 계산에 사용할 수 있어요.':'선택하지 않아도 위치 공유는 가능해요. 선택만으로 경로를 계산하지 않아요.'};
+    status:allowed?'이 픽업에서 차량이 비교를 요청하면 현재 위치를 TMAP 경로 계산에 사용할 수 있어요.':'선택하지 않아도 위치 공유는 가능해요. 선택만으로 경로를 계산하지 않아요.'};
 }
 
 // Reuses the existing page's typography and controls. Never renders server HTML.

@@ -6,7 +6,7 @@ let state=null,token=null,busy=false,reading=false,localConnected=false,lastLink
 const notice=value=>{$('notice').hidden=!value;text('notice',value);};
 function render() {
   const view=consoleView(localConnected?state:{...state,connected:false});
-  text('mode',state?.mode?.includes('demo')?'가상 화면 검사 · 실제 만남 아님':'이 Mac에서만 관리');
+  text('mode',state?.mode?.includes('demo')?'가상 화면 검사 · 실제 픽업 아님':'이 Mac에서만 관리');
   if(state?.mode?.includes('demo'))notice(state.mode==='pairing-demo'?'가상 차량 연결 화면 검사 · 검사 코드는 ABCD EF12 3456이에요. 실제 차량·휴대폰·외부 서버에 연결하지 않아요.':'가상 화면 검사입니다. 수신·중지 상태는 예제이며 휴대폰이나 외부 서버에 연결하지 않아요.');
   text('status-title',view.title);text('status-copy',view.copy);text('freshness',view.freshness);
   $('create').hidden=!view.canCreate;$('create').disabled=busy||!localConnected;

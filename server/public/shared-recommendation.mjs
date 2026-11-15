@@ -10,7 +10,7 @@ export function sharedRecommendationView(session,now=Date.now()) {
     if(!['a','b','c'].includes(c?.id)||ids.has(c.id)||c.curbStatus!=='unknown'||
       ![c.walkMeters,c.walkSeconds,c.detourSeconds].every(n=>Number.isSafeInteger(n)&&n>=0&&n<=2147483647))return null;
     ids.add(c.id);
-    items.push({title:`만남 지점 ${c.id.toUpperCase()}`,copy:`도보 ${c.walkMeters}m · ${Math.ceil(c.walkSeconds/60)}분 / 차량 우회 ${Math.ceil(c.detourSeconds/60)}분`});
+    items.push({title:`픽업 지점 ${c.id.toUpperCase()}`,copy:`도보 ${c.walkMeters}m · ${Math.ceil(c.walkSeconds/60)}분 / 차량 우회 ${Math.ceil(c.detourSeconds/60)}분`});
   }
   return {items,validUntil:Math.min(report.validUntil,share.validUntil)};
 }

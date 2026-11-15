@@ -16,13 +16,13 @@ export function meetingView(session, now = Date.now()) {
   const ready=!route || (route.status === 'ready' && !stale);
   const candidate=ready ? session.candidates.find(c=>c.id === session.selection?.candidateId) ?? null : null;
   const status=candidate ? session.selection.navigationStatus : null;
-  let title='차량에서 지점을 고르고 있어요',copy='선택이 끝나면 만날 곳이 여기에 표시돼요.';
-  if(route?.status === 'calculating') {title='함께 만날 경로를 비교하고 있어요';copy='도보와 차량 우회시간을 계산한 뒤 후보를 표시해요.';}
+  let title='차량에서 지점을 고르고 있어요',copy='선택이 끝나면 픽업 지점이 여기에 표시돼요.';
+  if(route?.status === 'calculating') {title='픽업 경로를 비교하고 있어요';copy='도보와 차량 우회시간을 계산한 뒤 후보를 표시해요.';}
   else if(stale) {title='경로를 다시 확인하고 있어요';copy='이전 계산의 유효시간이 지났어요. 운전자가 경로를 다시 계산할 수 있어요.';}
   else if(route?.status === 'failed') {title='경로를 계산하지 못했어요';copy=routeFailureCopy(route.issue);}
-  else if(status === 'confirmed') {title='만날 곳이 정해졌어요';copy='차량 내비의 목적지 설정을 확인했어요. 이동 중인지는 아직 알 수 없어요.';}
+  else if(status === 'confirmed') {title='픽업 지점이 정해졌어요';copy='차량 내비의 목적지 설정을 확인했어요. 이동 중인지는 아직 알 수 없어요.';}
   else if(status === 'failed') {title='내비 설정을 다시 확인해 주세요';copy='지점은 선택됐지만 내비 설정을 확인하지 못했어요. 운전자가 다시 시도할 수 있어요.';}
-  else if(status === 'not-requested') {title='만날 곳이 정해졌어요';copy='차량과 같은 만남 지점을 보고 있어요. 이곳에서 만나 주세요.';}
+  else if(status === 'not-requested') {title='픽업 지점이 정해졌어요';copy='차량과 같은 픽업 지점을 보고 있어요. 이 픽업 지점에서 기다려 주세요.';}
   else if(candidate) {title='차량 내비를 확인하고 있어요';copy='선택한 지점을 차량 내비에 전달하는 중이에요.';}
   return {title,copy,candidate,status,stale};
 }

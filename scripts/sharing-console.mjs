@@ -31,11 +31,11 @@ server.listen(pairingDemo?8796:demo?8794:8793,'127.0.0.1',()=>console.log(`픽�
 let closing=false;
 async function close() {
   if(closing)return;closing=true;
-  console.log('진행 중인 만남의 종료를 확인하고 있어요.');
+  console.log('진행 중인 픽업의 종료를 확인하고 있어요.');
   try {
     const state=await controller.close();
     console.log(['create-unknown','end-unknown'].includes(state.phase)?
-      '종료를 확인하지 못했어요. 휴대폰에서 공유를 중지해 주세요. 만남과 위치는 서버의 유효기간에 따라 만료돼요.':'관리 화면을 종료했어요.');
+      '종료를 확인하지 못했어요. 휴대폰에서 공유를 중지해 주세요. 픽업과 위치는 서버의 유효기간에 따라 만료돼요.':'관리 화면을 종료했어요.');
   }finally {server.close();server.closeAllConnections();}
 }
 process.on('SIGINT',()=>void close());process.on('SIGTERM',()=>void close());

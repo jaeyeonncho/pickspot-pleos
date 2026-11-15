@@ -35,7 +35,7 @@ try {
     '-n','dev.pickspot.app/.MainActivity','--es','demo_scenario','competition']);
   await exec('open',['http://127.0.0.1:8788/']);
   console.log('공모전 시연을 시작했어요. 차량의 참여 코드를 웹에 입력하고 예제 위치를 공유하세요.');
-  console.log('후보 비교 → 지점 선택 → Pleos 이동시간 미리보기 → 만남 종료 순서로 보여줄 수 있어요.');
+  console.log('후보 비교 → 지점 선택 → Pleos 이동시간 미리보기 → 픽업 종료 순서로 보여줄 수 있어요.');
   console.log('이 창을 열어 두세요. 종료: Control+C. 실제 위치·TMAP 호출·현장 확인 없이 진행해요.');
   // Hold the terminal even if another competition launcher owns the shared server.
   const keepAlive=setInterval(()=>{},60000);

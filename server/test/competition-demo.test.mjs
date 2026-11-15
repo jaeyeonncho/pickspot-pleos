@@ -30,7 +30,7 @@ test('competition demo shares a chosen point without claiming navigation and all
     const result=await call(path+'/meeting-choice','PUT',{candidateId:id,expectedVersion:state.version},driver);
     assert.equal(result.status,200);state=result.value;assert.equal(state.selection.navigationStatus,'not-requested');
     const view=meetingView((await call(path,'GET',undefined,passenger)).value);
-    assert.equal(view.candidate.id,id);assert.equal(view.status,'not-requested');assert.match(view.copy,/같은 만남 지점/);
+    assert.equal(view.candidate.id,id);assert.equal(view.status,'not-requested');assert.match(view.copy,/같은 픽업 지점/);
   }
   assert.equal((await call(path+'/meeting-choice','PUT',{candidateId:'a',expectedVersion:1},driver)).status,409);
   // Selecting a meeting point cannot manufacture a navigation receipt.

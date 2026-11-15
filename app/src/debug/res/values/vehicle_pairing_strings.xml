@@ -1,5 +1,5 @@
 <resources>
-    <string name="pairing_title">만남에 차량 연결</string>
+    <string name="pairing_title">픽업에 차량 연결</string>
     <string name="pairing_unavailable">차량 연결 서버를 준비하고 있어요. 아직 연결 코드를 만들 수 없어요.</string>
     <string name="pairing_idle">코드를 만든 뒤 Mac 관리 화면에서 같은 코드를 입력하고 승인해 주세요.</string>
     <string name="pairing_creating">연결 코드를 만들고 있어요.</string>

@@ -2,18 +2,18 @@
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>픽스팟 · 휴대폰 테스트</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.mjs"></script></head>
 <body><main>
 <header><a class="brand" href="/">● pickspot</a><span id="mode">이 Mac에서만 관리</span></header>
-<section class="intro"><span class="eyebrow">PHONE CONNECTION TEST</span><h1>만나는 과정을<br>한눈에 확인해요.</h1><p>링크를 만들고, 휴대폰으로 참여하고,<br>공유가 끝났는지 확인하세요.</p></section>
+<section class="intro"><span class="eyebrow">PHONE CONNECTION TEST</span><h1>픽업 과정을<br>한눈에 확인해요.</h1><p>링크를 만들고, 휴대폰으로 참여하고,<br>공유가 끝났는지 확인하세요.</p></section>
 <p id="notice" role="status" hidden></p>
 <section class="card status-card"><div class="status-heading"><span class="eyebrow">01 · 연결 상태</span><span id="freshness"></span></div><h2 id="status-title" aria-live="polite">관리 화면에 연결하고 있어요</h2><p id="status-copy">잠시 기다려 주세요.</p>
-<button id="create" disabled>새 만남 만들기</button>
+<button id="create" disabled>새 픽업 만들기</button>
 <div id="invitation" hidden><label for="invite-link">휴대폰에 보낼 참가 링크</label><input id="invite-link" readonly type="text" autocomplete="off" spellcheck="false"><button id="copy">참가 링크 복사</button><p class="fine" id="copy-result" aria-live="polite"></p><div class="invite-meta"><span>코드 <strong id="invite-code"></strong></span><span id="remaining"></span></div></div>
-<button id="end" class="secondary" hidden>만남 종료</button>
+<button id="end" class="secondary" hidden>픽업 종료</button>
 </section>
 <section class="card" id="vehicle-panel" hidden><span class="eyebrow">차량 연결</span>
 <h2 id="vehicle-title">차량 연결을 준비해요</h2><p id="vehicle-status" role="status"></p>
 <div id="vehicle-form" hidden><label for="vehicle-code">차량 화면에 표시된 12자리 연결 코드</label><input id="vehicle-code" type="text" maxlength="14" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCD EF12 3456">
 <p class="fine">차량 화면의 코드와 같은지 확인해 주세요. 승인하면 기존 차량 연결은 해제돼요. 연결만으로 위치를 보내지는 않아요.</p>
 <button id="vehicle-approve" disabled>이 차량 연결 승인</button><button id="vehicle-revoke" class="secondary" disabled>차량 연결 해제</button></div></section>
-<section class="card guide"><span class="eyebrow">02 · 휴대폰에서 할 일</span><ol><li>링크를 열고 <strong>이 만남에 참가하기</strong>를 눌러요.</li><li>공유에 동의한 뒤 <strong>공유 시작</strong>과 위치 권한을 허용해요.</li><li><strong>위치가 전달됐어요</strong>를 확인하고 10초 정도 기다려요.</li><li>휴대폰에서 <strong>위치 공유 중지</strong>를 누른 뒤 여기서 만남을 종료해요.</li></ol></section>
-<footer><p>개인 위치와 서버 인증 키는 이 화면에 표시하지 않아요.<br><span id="routing-note">실제 위치 공유 여부는 휴대폰에서 직접 선택하며, TMAP으로 보내지 않아요.</span></p><p>이 페이지는 이 Mac에서만 열려요. 관리용 터미널 창을 닫으면 종료를 시도해요.<br>브라우저 탭을 닫는 것만으로 만남이 종료되지는 않아요.</p></footer>
+<section class="card guide"><span class="eyebrow">02 · 휴대폰에서 할 일</span><ol><li>링크를 열고 <strong>이 픽업에 참가하기</strong>를 눌러요.</li><li>공유에 동의한 뒤 <strong>공유 시작</strong>과 위치 권한을 허용해요.</li><li><strong>위치가 전달됐어요</strong>를 확인하고 10초 정도 기다려요.</li><li>휴대폰에서 <strong>위치 공유 중지</strong>를 누른 뒤 여기서 픽업을 종료해요.</li></ol></section>
+<footer><p>개인 위치와 서버 인증 키는 이 화면에 표시하지 않아요.<br><span id="routing-note">실제 위치 공유 여부는 휴대폰에서 직접 선택하며, TMAP으로 보내지 않아요.</span></p><p>이 페이지는 이 Mac에서만 열려요. 관리용 터미널 창을 닫으면 종료를 시도해요.<br>브라우저 탭을 닫는 것만으로 픽업이 종료되지는 않아요.</p></footer>
 </main></body></html>

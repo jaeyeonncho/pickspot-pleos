@@ -63,7 +63,7 @@ class PickupAtlasProbe(private val instrumentation: Instrumentation) {
      for((name,state) in states) {
       val screen=PickupScreen(context,{},competitionDemo=true);screen.render(state)
       if(name=="13_settings")screen.view.findViewById<Button>(R.id.dashboard_settings_toggle).performClick()
-      val target=TripPreviewTarget("atlas","a","만남 지점 A",session.candidates.first().point)
+      val target=TripPreviewTarget("atlas","a","픽업 지점 A",session.candidates.first().point)
       val preview=when(name){"11_pleos_loading"->TripPreviewState(target,true,busy=true,phase=TripPreviewPhase.LOADING);"12_pleos_ready"->TripPreviewState(target,true,phase=TripPreviewPhase.READY,metrics=TripPreviewMetrics(12331,1045),ageSeconds=3);else->TripPreviewState(target,state.canSelect)}
       TripPreviewPanel(context,screen.view){}.render(preview)
       val view=screen.view;view.measure(View.MeasureSpec.makeMeasureSpec(1600,View.MeasureSpec.EXACTLY),View.MeasureSpec.makeMeasureSpec(900,View.MeasureSpec.EXACTLY));view.layout(0,0,1600,900)

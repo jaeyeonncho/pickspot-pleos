@@ -48,7 +48,7 @@ async function page(t,hash='#join=ABCDEF123456',{routing=false,storedValue=null}
 test('opening an invitation preserves the code until explicit participation, with location consent still separate',async t=>{
   const p=await page(t);
   assert.equal(p.calls.length,1);assert.ok(p.calls[0].url.endsWith('/health'));
-  assert.equal(p.element('join-title').textContent,'이 만남에 참가할까요?');
+  assert.equal(p.element('join-title').textContent,'이 픽업에 참가할까요?');
   assert.equal(p.element('code-fields').hidden,true);
   assert.equal(p.location.hash,'#join=ABCDEF123456');assert.equal(p.gpsCalls(),0);
   await p.act('join-form','submit');

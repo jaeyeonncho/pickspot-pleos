@@ -122,12 +122,12 @@ export class ShareClient {
 }
 
 export function shareView(state,now=Date.now()) {
-  const labels={idle:['위치 공유를 준비해요','동의하고 시작하면 이 만남에만 위치를 전달해요.'],
-    starting:['공유 동의를 확인하고 있어요','확인이 끝나면 위치 수신을 시작해요.'],waiting:['새 위치를 기다리고 있어요','위치를 받으면 이 만남의 서버에 전달해요.'],
+  const labels={idle:['위치 공유를 준비해요','동의하고 시작하면 이 픽업에만 위치를 전달해요.'],
+    starting:['공유 동의를 확인하고 있어요','확인이 끝나면 위치 수신을 시작해요.'],waiting:['새 위치를 기다리고 있어요','위치를 받으면 이 픽업의 서버에 전달해요.'],
     sending:['새 위치를 전달하고 있어요','서버의 수신 확인을 기다려요.'],sharing:['위치가 전달됐어요','현재는 위치 공유만 확인할 수 있어요. 픽업 경로 계산은 아직 연결 전이에요.'],
     'stop-pending':['수집을 멈췄어요 · 서버 확인 중','이 기기의 위치는 지웠어요. 연결되면 서버 삭제를 다시 확인해요. 서버에 남은 위치도 최대 30초 뒤 만료돼요.'],
     stopped:['위치 공유를 멈췄어요','서버의 위치 삭제를 확인했어요. 다시 공유하려면 동의하고 시작해 주세요.'],
-    closed:['만남이 끝났어요','위치 수집을 멈췄어요. 새로운 코드로 다시 참여할 수 있어요.']};
+    closed:['픽업이 끝났어요','위치 수집을 멈췄어요. 새로운 코드로 다시 참여할 수 있어요.']};
   let [title,copy]=labels[state.status]??labels.idle;
   const acknowledged=['sharing','sending'].includes(state.status)&&Number.isSafeInteger(state.confirmedAt);
   const activeSharing=acknowledged&&state.confirmedAt<=now&&Number.isSafeInteger(state.validUntil)&&state.validUntil>now;

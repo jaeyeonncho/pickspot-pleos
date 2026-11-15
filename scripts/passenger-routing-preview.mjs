@@ -22,7 +22,7 @@ $('join-panel').hidden=true;$('sharing-panel').hidden=false;$('mode-label').text
 $('mode-copy').textContent='위치 공유와 경로 계산 동의를 따로 선택하는 화면이에요.';
 $('notice').hidden=false;$('notice').textContent='예제 전용 화면입니다. 실제 위치·차량·외부 서버를 사용하지 않고, 버튼은 이 페이지의 가짜 상태만 바꿔요.';
 $('scope-copy').textContent='아래 전송 안내는 제품 화면의 문구입니다. 이 예제에서는 위치를 수집하거나 보내지 않아요.';
-$('consent-copy').textContent='이 만남을 위해 기기 위치를 서버에 공유하는 데 동의해요.';
+$('consent-copy').textContent='이 픽업을 위해 기기 위치를 서버에 공유하는 데 동의해요.';
 $('sharing-limits').textContent='공유와 철회는 예제 상태로만 표시해요. 새로고침하면 선택은 초기화돼요.';
 $('footer-copy').textContent='브라우저 메모리만 사용하는 화면 검사 · 실제 위치/외부 전송 없음';
 disclosure=await client.loadRoutingDisclosure();render(client.state);

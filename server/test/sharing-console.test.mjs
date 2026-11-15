@@ -76,7 +76,7 @@ test('UI maintains received title across age ticks and hides stale or demo clipb
   assert.equal(consoleView(ready,x.now()+5000).freshness,'5초 전 확인');
   assert.equal(consoleView(ready,x.now()+10000).invitation,null);
   assert.equal(consoleView({...state,mode:'demo'},x.now()).canCopy,false);
-  assert.equal(consoleView({...state,phase:'end-unknown',connected:false},x.now()).endLabel,'만남 종료 다시 확인');
+  assert.equal(consoleView({...state,phase:'end-unknown',connected:false},x.now()).endLabel,'픽업 종료 다시 확인');
 });
 
 async function httpSetup(t) {

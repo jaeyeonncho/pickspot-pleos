@@ -10,8 +10,8 @@
     <string name="live_routes_empty">이번에는 비교할 수 있는 후보가 없어요.</string>
     <string name="live_routes_stale">입력이 바뀌었거나 시간이 지나 결과를 지웠어요. 최신 입력으로 다시 확인해 주세요.</string>
     <string name="live_routes_connection">연결을 확인하지 못했어요. 이전 결과는 숨겼어요.</string>
-    <string name="live_routes_access">만남에 다시 연결해야 해요.</string>
-    <string name="live_routes_changed">만남 정보가 바뀌었어요. 최신 상태를 확인해 주세요.</string>
+    <string name="live_routes_access">픽업에 다시 연결해야 해요.</string>
+    <string name="live_routes_changed">픽업 정보가 바뀌었어요. 최신 상태를 확인해 주세요.</string>
     <string name="live_routes_consent_required">운전자와 동승자의 경로 전송 동의가 필요해요.</string>
     <string name="live_routes_input">차량 위치·내비 경로·계산 기준을 다시 확인해 주세요.</string>
     <string name="live_routes_limit">조회 간격이나 이용 한도에 도달했어요. 잠시 후 상태를 확인해 주세요.</string>

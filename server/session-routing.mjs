@@ -38,7 +38,7 @@ export function routeCandidates(report) {
     if (!candidate||ids.has(metric.id)||metric.curbStatus!=='unknown'||
       ![metric.walkMeters,metric.walkSeconds,metric.detourSeconds].every(n=>Number.isSafeInteger(n)&&n>=0&&n<=2147483647))throw new Error('Invalid candidate');
     ids.add(metric.id);
-    return {id:metric.id,name:`만남 지점 ${metric.id.toUpperCase()}`,point:candidate.point,
+    return {id:metric.id,name:`픽업 지점 ${metric.id.toUpperCase()}`,point:candidate.point,
       walkMeters:metric.walkMeters,walkSeconds:metric.walkSeconds,detourSeconds:metric.detourSeconds,
       curbStatus:'unknown',note:report.source==='tmap'?'TMAP 경로 비교 · 예제 위치 · 정차 조건 미확인':'예제 경로 비교 · 실제 정차 조건은 확인되지 않았어요'};
   });

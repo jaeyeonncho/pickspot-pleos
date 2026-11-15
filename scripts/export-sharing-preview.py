@@ -12,8 +12,8 @@ except (ValueError,IndexError):
     raise SystemExit('공유 화면 검사 결과를 읽지 못했습니다.')
 if report.get('passed') is not True or report.get('refreshKeepsRowsAndLayout') is not True:
     raise SystemExit('공유 화면 검사를 통과하지 못했습니다.')
-labels={'idle':'만남 만들기','invitation':'초대 대기','ready':'위치 수신','stale':'위치 만료',
-        'withdrawn':'공유 중지','offline':'연결 끊김','ended':'만남 종료','restricted':'주행 제한'}
+labels={'idle':'픽업 만들기','invitation':'초대 대기','ready':'위치 수신','stale':'위치 만료',
+        'withdrawn':'공유 중지','offline':'연결 끊김','ended':'픽업 종료','restricted':'주행 제한'}
 expected={f'sharing-{state}-{width}.png' for state in labels for width in (520,960)}
 if set(report.get('files',[]))!=expected or len(report['files'])!=len(expected):
     raise SystemExit('예상한 화면 파일 목록과 다릅니다.')
@@ -39,7 +39,7 @@ page='''<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewpor
 <div class="controls"><label for="width">렌더링 폭 </label><select id="width"><option value="960">960px · 넓게</option><option value="520">520px · 좁게</option></select><a id="original" href="sharing-ready-960.png">원본 이미지 열기</a></div>
 <figure><img id="screen" src="sharing-ready-960.png" width="960" alt="위치 수신 · 공유 상태 확인 3초 전과 가상 후보 비교"><figcaption id="caption" aria-live="polite">위치 수신 · 960px</figcaption></figure>
 <noscript>상태 선택에는 JavaScript가 필요합니다. 같은 폴더에 16개 PNG 원본이 있습니다.</noscript>
-<footer><strong>디자인 수정 위치</strong><br>배치: <code>app/src/debug/res/layout/activity_sharing.xml</code><br>문구: <code>app/src/debug/res/values/sharing_strings.xml</code><br>표시: <code>sharing/SharingScreen.kt</code><br><small>색·간격·글꼴은 기존 공통 리소스를 사용합니다. 수정 후 <code>preview-sharing.command</code>를 실행하면 이미지와 이 문서를 갱신합니다. 만남 생성·위치 수집·내비 변경·외부 API 호출은 하지 않습니다.</small></footer>
+<footer><strong>디자인 수정 위치</strong><br>배치: <code>app/src/debug/res/layout/activity_sharing.xml</code><br>문구: <code>app/src/debug/res/values/sharing_strings.xml</code><br>표시: <code>sharing/SharingScreen.kt</code><br><small>색·간격·글꼴은 기존 공통 리소스를 사용합니다. 수정 후 <code>preview-sharing.command</code>를 실행하면 이미지와 이 문서를 갱신합니다. 픽업 생성·위치 수집·내비 변경·외부 API 호출은 하지 않습니다.</small></footer>
 <script>
 const labels=LABELS;let current='ready';const width=document.getElementById('width');
 function render(){const file=`sharing-${current}-${width.value}.png`;document.getElementById('screen').src=file;document.getElementById('screen').alt=`${labels[current]} · ${width.value}px`;document.getElementById('screen').width=Number(width.value);document.getElementById('original').href=file;document.getElementById('caption').textContent=`${labels[current]} · ${width.value}px`;document.querySelectorAll('[data-state]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.state===current)));}

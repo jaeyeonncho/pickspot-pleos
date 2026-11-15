@@ -3,9 +3,9 @@
     <string name="sharing_note">Mac의 동승자 웹에 참여 코드를 입력해 주세요. 가상 위치를 공유하면 예제 후보가 나타나요. 실제 위치를 읽거나 내비 안내를 바꾸지 않아요.</string>
     <string name="sharing_recommendation_title">가상 후보 비교</string>
     <string name="sharing_recommendation_note">위치와 이동시간은 예제예요. 실제 승하차 가능 여부는 확인하지 않았어요.</string>
-    <string name="sharing_candidate">만남 지점 %1$s · 도보 %2$dm (%3$d분) · 차량 우회 %4$d분</string>
-    <string name="sharing_idle">만남을 만들고 동승자를 초대해 보세요.</string>
-    <string name="sharing_create">가상 만남 만들기</string>
+    <string name="sharing_candidate">픽업 지점 %1$s · 도보 %2$dm (%3$d분) · 차량 우회 %4$d분</string>
+    <string name="sharing_idle">픽업을 만들고 동승자를 초대해 보세요.</string>
+    <string name="sharing_create">가상 픽업 만들기</string>
     <string name="sharing_connecting">공유 상태를 확인하고 있어요.</string>
     <string name="sharing_join">동승자의 참여를 기다리고 있어요.</string>
     <string name="sharing_code">참여 코드: %1$s</string>
@@ -16,11 +16,11 @@
     <string name="sharing_withdrawn">동승자가 공유를 멈췄어요. 서버의 위치가 삭제됐어요.</string>
     <string name="sharing_invalid">위치 정보를 다시 확인해야 해요.</string>
     <string name="sharing_offline">연결을 확인할 수 없어 이전 공유 상태를 숨겼어요.</string>
-    <string name="sharing_ending">만남 종료를 확인하고 있어요. 연결되면 종료를 다시 요청해요.</string>
-    <string name="sharing_ended">만남이 끝났거나 더 이상 연결할 수 없어요.</string>
+    <string name="sharing_ending">픽업 종료를 확인하고 있어요. 연결되면 종료를 다시 요청해요.</string>
+    <string name="sharing_ended">픽업이 끝났거나 더 이상 연결할 수 없어요.</string>
     <string name="sharing_paused">화면을 다시 열면 공유 상태를 확인해요.</string>
     <string name="sharing_retry">연결 다시 확인</string>
-    <string name="sharing_end">가상 만남 종료</string>
+    <string name="sharing_end">가상 픽업 종료</string>
     <string name="sharing_back">픽스팟으로 돌아가기</string>
     <string name="sharing_checked_ago">공유 상태 확인 · %1$d초 전</string>
 </resources>

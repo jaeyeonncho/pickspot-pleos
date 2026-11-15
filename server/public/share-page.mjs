@@ -11,11 +11,11 @@ try{linkedCode=invitationCode(window.location.hash);}catch{invalidLink=true;}
 const notice=text=>{$('notice').hidden=!text;$('notice').textContent=text;};
 function showJoin() {
   $('join-panel').hidden=false;
-  $('join-title').textContent=linkedCode?'이 만남에 참가할까요?':'연결 코드를 입력해 주세요';
+  $('join-title').textContent=linkedCode?'이 픽업에 참가할까요?':'연결 코드를 입력해 주세요';
   $('join-help').hidden=!linkedCode;
   $('code-fields').hidden=!!linkedCode;
   $('use-code').hidden=!linkedCode;
-  $('join').textContent=linkedCode?'이 만남에 참가하기':'만남에 참여하기';
+  $('join').textContent=linkedCode?'이 픽업에 참가하기':'픽업에 참여하기';
   $('join').disabled=!serverReady||joining;
   if(linkedCode)$('code').value=linkedCode;
 }
@@ -105,7 +105,7 @@ window.addEventListener('hashchange',()=>{
   if(!serverReady)return;
   if(client?.state.status==='closed'){client=null;save(null);$('closed-panel').hidden=true;$('join-panel').hidden=false;}
   if(!client){notice('');showJoin();}
-  else notice('현재 참여 중인 만남이 있어요. 만남 종료 후 새 링크로 참여해 주세요.');
+  else notice('현재 참여 중인 픽업이 있어요. 픽업 종료 후 새 링크로 참여해 주세요.');
 });
 setInterval(()=>{if(!document.hidden)void client?.check();},5000);
 setInterval(()=>{if(client)renderStatus(client.state);renderSharedRecommendation($('shared-recommendation'),recommendationSession);},1000);
@@ -115,22 +115,22 @@ try {
   simulation=health.simulation;sharedRecommendations=health.sharedRecommendations===true;
   routingEnabled=!simulation&&health.passengerRoutingConsent===true;
 
-  $('mode-label').textContent=simulation?'공유 흐름 시뮬레이션 · 가상 위치':'이 만남에만 위치 공유';
-  $('mode-copy').textContent=simulation?'고정 가상 위치로 공유·중지 흐름을 확인해요. 실제 기기 위치는 읽지 않아요.':'동의하면 현재 위치를 이 만남의 서버로 전달해요. 공유는 언제든 멈출 수 있어요.';
+  $('mode-label').textContent=simulation?'공유 흐름 시뮬레이션 · 가상 위치':'이 픽업에만 위치 공유';
+  $('mode-copy').textContent=simulation?'고정 가상 위치로 공유·중지 흐름을 확인해요. 실제 기기 위치는 읽지 않아요.':'동의하면 현재 위치를 이 픽업의 서버로 전달해요. 공유는 언제든 멈출 수 있어요.';
   if(health.sharedRecommendations)$('mode-copy').textContent='고정 가상 위치를 공유하면 예제 후보를 함께 비교해요. 실제 위치·경로가 아니에요.';
-  $('scope-copy').textContent=simulation?'이 시뮬레이션은 같은 컴퓨터의 서버에 고정 가상 좌표만 전달해요.':'기기 위치·측정시각·정확도를 이 만남의 서버에 전달해요. 위치는 최대 30초간 유효하며 이후 서버가 지워요. 화면을 떠나거나 2분이 지나면 공유가 멈춰요.';
+  $('scope-copy').textContent=simulation?'이 시뮬레이션은 같은 컴퓨터의 서버에 고정 가상 좌표만 전달해요.':'기기 위치·측정시각·정확도를 이 픽업의 서버에 전달해요. 위치는 최대 30초간 유효하며 이후 서버가 지워요. 화면을 떠나거나 2분이 지나면 공유가 멈춰요.';
   if(!simulation&&health.hosting==='render-free')$('scope-copy').textContent='휴대폰 연결 테스트를 위해 기기 위치·측정시각·정확도를 Render에 호스팅한 픽스팟 서버로 전달해요. 위치는 메모리에서 최대 30초간 유효하며 이후 지워요. TMAP으로 보내지 않아요. 화면을 떠나거나 2분이 지나면 공유가 멈춰요.';
   if(routingEnabled){
-    $('mode-copy').textContent='이 만남에 위치를 공유하고, 원하면 경로 계산에도 따로 동의할 수 있어요.';
+    $('mode-copy').textContent='이 픽업에 위치를 공유하고, 원하면 경로 계산에도 따로 동의할 수 있어요.';
     $('sharing-limits').textContent='화면을 떠나거나 연결이 끊기면 수집을 멈춰요. 서버 삭제를 확인하기 전에는 다시 공유하지 않아요. 경로 비교 결과는 차량에서 확인하며 내비 안내를 자동으로 바꾸지 않아요.';
   }
-  $('consent-copy').textContent=simulation?'이 만남에 가상 위치를 공유해 볼게요.':'이 만남을 위해 기기 위치를 서버에 공유하는 데 동의해요.';
+  $('consent-copy').textContent=simulation?'이 픽업에 가상 위치를 공유해 볼게요.':'이 픽업을 위해 기기 위치를 서버에 공유하는 데 동의해요.';
   $('join').disabled=false;
   serverReady=true;
   let restored;try{restored=restoreShare(sessionStorage.getItem(key));}catch{}
   if(restored){attach(restored,{restoring:true});await client.restore();if(routingEnabled&&client.state.status!=='closed')await loadRoutingConsent(client);}
   if(linkedCode&&client?.state.status==='closed'){client=null;save(null);$('closed-panel').hidden=true;$('join-panel').hidden=false;}
   if(!client)showJoin();
-  else if(linkedCode&&client){notice('이 브라우저에서 참여했던 만남을 먼저 확인했어요. 만남 종료 후 ‘다른 만남에 참여하기’를 누르면 새 링크로 연결돼요.');}
+  else if(linkedCode&&client){notice('이 브라우저에서 참여했던 픽업을 먼저 확인했어요. 픽업 종료 후 ‘다른 픽업에 참여하기’를 누르면 새 링크로 연결돼요.');}
   if(invalidLink){notice('참여 링크가 올바르지 않아요. 새 링크를 받거나 연결 코드를 입력해 주세요.');}
 }catch{notice('공유 서버에 연결하지 못했어요. 서버 실행 상태를 확인하고 새로고침해 주세요.');}

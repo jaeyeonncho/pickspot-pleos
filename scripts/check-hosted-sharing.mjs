@@ -43,7 +43,7 @@ export async function checkHostedSharing({origin,driverKey,fetchImpl=fetch}) {
     await operator.end();ended=true;
     const closed=await request(path,'GET',undefined,token);
     require(closed.status===410&&closed.data.error==='SESSION_ENDED','END_NOT_CONFIRMED');
-    checks.push('만남 종료의 동승자 반영');
+    checks.push('픽업 종료의 동승자 반영');
     return {passed:true,checks,cleanupConfirmed:true,locationInput:'fixed-example-only',routingApiCalls:0};
   }catch{
     if(created&&!ended)try{await operator.end();ended=true;}catch{/* Session expires even if transport is unavailable. */}
